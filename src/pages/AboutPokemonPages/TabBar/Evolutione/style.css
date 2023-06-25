@@ -1,0 +1,66 @@
+.evolution-container {
+  margin-top: 1rem;
+}
+
+.evolution-chain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.evolution {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.evolution img {
+  width: 5rem;
+  height: 5rem;
+}
+
+.arrow {
+  font-size: 3rem;
+  color: #ccc;
+  margin-right: 1rem;
+}
+
+.nickname {
+  text-transform: uppercase;
+}
+
+@media (min-width: 320px) {
+  .evolution img {
+    width: 5rem;
+    height: 5rem;
+  }
+  .evolution-chain{
+    flex-direction: column;
+  }
+  .arrow{
+    transform: rotate(90deg);
+  }
+}
+
+@media (min-width: 768px) {
+  .evolution img {
+    width: 6rem;
+    height: 6rem;
+  }
+  .evolution-chain{
+    flex-direction: row;
+  }
+  .arrow{
+    transform: rotate(0deg);
+  }
+}
+
+@media (min-width: 1024px) {
+  .evolution img {
+    width: 7rem;
+    height: 7rem;
+  }
+}
+
+

@@ -1,0 +1,85 @@
+.pokemon_card {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  margin-bottom: 10px;
+  background-color: #000121;
+  border: 1px solid #88888830;
+  border-radius: 10px;
+  
+}
+
+.container {
+  list-style-type: none;
+}
+
+.elem {
+  border: 1px solid #88888830;
+  background-color: #000121;
+  padding: 0 10px;
+  padding-left: 10px;
+}
+
+.elem3{
+  border: 1px solid #88888830;
+  background-color: #000121;
+  padding: 5px 10px;
+  padding-left: 10px;
+}
+
+.elem1 {
+  border-bottom: 1px solid #88888830;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: #000121;
+  padding: 5px 10px;
+  padding-left: 10px;
+}
+
+img {
+  width: 250px;
+  height: 250px;
+}
+
+.pad {
+  padding:1.5px 0;
+  padding-right: 10px;
+  margin: 2px;
+  border: 1px solid #88888830;
+  border-radius: 5px;
+  padding-left: 1px;
+  padding-right: 1px;
+  background-color: orange;
+}
+
+.flex{
+  display: flex;
+}
+
+.otstup {
+  display: flex;
+  padding: 2.5px 0;
+  border: 1px solid #88888830;
+  padding-left: 10px;
+  background-color: #000121;
+  justify-content: space-between;
+}
+
+.stop {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  border: 1px solid #88888830;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.bob {
+  display: flex;
+  align-items: center;
+  margin-right: 50px;
+}

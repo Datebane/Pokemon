@@ -1,0 +1,75 @@
+.icon {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.icon_2 {
+  width: 200px;
+  height: 200px;
+}
+
+.table {
+  border: 2px solid #88888830;
+  border-radius: 10px;
+  list-style-type: none;
+  width: 200px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0 10px;
+  padding-top: 10px;
+  margin: 1px 10px;
+
+  --c: #88888830;
+  background: linear-gradient(90deg, white 50%, var(--c) 0)
+      calc(100% - var(--_p, 0%)) / 200%,
+    linear-gradient(var(--c) 0 0) 0% 100% / var(--_p, 0%) no-repeat,
+    var(--_c, #0000);
+  -webkit-background-clip: text, padding-box, padding-box;
+  background-clip: text, padding-box, padding-box;
+  transition: 0s, color 0.5s, background-color 0.5s;
+}
+
+.table:hover {
+  /* background-color: #88888830; */
+  color: white;
+  --_c: var(--c);
+  --_p: 100%;
+  transition: 0.5s, color 0s 0.5s, background-color 0s 0.5s;
+}
+
+/* #item {
+  --b: 0.1em;   
+  --c: #1095c1; 
+  
+  color: #0000;
+  padding-block: var(--b);
+  background: 
+    linear-gradient(var(--c) 50%,#000 0) 0% calc(100% - var(--_p,0%))/100% 200%,
+    linear-gradient(var(--c) 0 0) 0% var(--_p,0%)/var(--_p,0%) var(--b) no-repeat;
+  -webkit-background-clip: text,padding-box;
+          background-clip: text,padding-box;
+  transition: .3s var(--_s,0s) linear,background-size .3s calc(.3s - var(--_s,0s));
+}
+#item:hover {
+  --_p: 100%;
+  --_s: .3s;
+} */
+
+.pokemon {
+  display: flex;
+  justify-content: space-around;
+}
+
+.displey {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text {
+  justify-content: center;
+}

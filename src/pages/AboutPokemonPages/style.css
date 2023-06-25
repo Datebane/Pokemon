@@ -1,0 +1,140 @@
+.button {
+  border: 2px solid #88888830;
+  border-radius: 5px;
+  padding: 5px 10px;
+  text-decoration: none;
+  font-size: 20px;
+  --c: #88888830;
+  background: linear-gradient(90deg, #fff 50%, var(--c) 0)
+      calc(100% - var(--_p, 0%)) / 200%,
+    linear-gradient(var(--c) 0 0) 0% 100% / var(--_p, 0%) no-repeat,
+    var(--_c, #0000);
+  -webkit-background-clip: text, padding-box, padding-box;
+  background-clip: text, padding-box, padding-box;
+  transition: 0s, color 0.5s, background-color 0.5s;
+}
+
+.button:hover {
+  color: #fff;
+  --_c: var(--c);
+  --_p: 100%;
+  transition: 0.5s, color 0s 0.5s, background-color 0s 0.5s;
+}
+
+.box {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 10px;
+  border-bottom: 2px solid #88888830;
+}
+
+.name {
+  text-transform: uppercase;
+  display: flex;
+  font-size: 25px;
+  padding-left: 10px;
+}
+
+.ids {
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  border: 2px solid #88888830;
+  border-radius: 5px;
+  padding: 0 5px;
+  background-color: orange;
+  font-size: 25px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.pod {
+  display: flex;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.block {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 10px;
+  height: 500px;
+}
+
+.pokemon-image {
+  margin-top: 30px;
+  margin-left: 30px;
+  width: 400px;
+  height: auto;
+}
+
+.about {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.container {
+  display: flex;
+}
+
+.lip {
+  border: 2px solid #88888830;
+  background-color: #000121;
+  border-radius: 10px;
+  padding:  10px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2px;
+}
+
+.ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid #88888830;
+  border-radius: 10px;
+  background-color: #000121;
+  padding: 0 10px;
+  margin-bottom: 2px;
+}
+
+.stats {
+  border: 2px solid #88888830;
+  border-radius: 5px;
+  padding-left: 3px;
+  padding-right: 3px;
+  background-color: orange;
+}
+
+@media (min-width: 320px) {
+  .block {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .pokemon-image {
+    width: 100px;
+    height: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .pokemon-image {
+    width: 250px;
+    height: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .block{
+    justify-content: space-between;
+  }
+  .pokemon-image {
+    width: 320px;
+    height: auto;
+  }
+}

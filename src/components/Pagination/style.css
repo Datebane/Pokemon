@@ -1,0 +1,46 @@
+.pagination {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+.bib {
+  display: flex;
+  justify-content: center;
+}
+
+.item {
+  margin: 0 10px;
+}
+
+.link {
+  border: 2px solid #88888830;
+  border-radius: 5px;
+  padding: 5px 10px;
+  text-decoration: none;
+  font-size: 20px;
+
+  --c: #88888830;
+  background: linear-gradient(90deg, #fff 50%, var(--c) 0)
+      calc(100% - var(--_p, 0%)) / 200%,
+    linear-gradient(var(--c) 0 0) 0% 100% / var(--_p, 0%) no-repeat,
+    var(--_c, #0000);
+  -webkit-background-clip: text, padding-box, padding-box;
+  background-clip: text, padding-box, padding-box;
+  transition: 0s, color 0.5s, background-color 0.5s;
+}
+
+.link:hover {
+  color: #fff;
+  --_c: var(--c);
+  --_p: 100%;
+  transition: 0.5s, color 0s 0.5s, background-color 0s 0.5s;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.link.active {
+  background-color: #88888830; /* Змініть колір фону на потрібний вам */
+}
