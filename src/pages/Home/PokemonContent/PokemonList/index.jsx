@@ -8,14 +8,13 @@ function PokemonList({ allPokemon }) {
   const [isCard, setCard] = useState([]);
 
   return (
-    <div className="displey">
+    <div className="list-pokemon">
       <ol>
         {allPokemon.map((pokemon, index) => (
           <Link to={`/about/${pokemon.id}`}>
             <li
-              id="item"
               key={index}
-              className="table"
+              className="list-pokemon_element"
               onMouseOver={() => {
                 setCard(pokemon);
               }}
@@ -23,15 +22,15 @@ function PokemonList({ allPokemon }) {
                 setCard("");
               }}
             >
-              <div className="pokemon">
+              <div className="pokemon-element">
                 <img
                   src={pokemon.sprites.front_default}
-                  className="icon"
+                  className="list-pokemon_img"
                   alt=""
                 />
-                <p className="text">id: {pokemon.id}</p>
+                <p className="list-pokemon_description">id: {pokemon.id}</p>
               </div>
-              <p className="text">{pokemon.name.toUpperCase()}</p>
+              <p className="list-pokemon_description">{pokemon.name.toUpperCase()}</p>
             </li>
           </Link>
         ))}

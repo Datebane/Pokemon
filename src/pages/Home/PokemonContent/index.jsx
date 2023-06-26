@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import PokemonList from "./PokemonList/index";
 import "./style.css";
 import Pagination from "../../../components/Pagination/index";
+// import SearchBar from "../../../components/SearchBar";
 
 function PokemonContent({ allPokemon, limit }) {
   const [currentPage, setCurrentPage] = useState(1);
@@ -15,6 +16,7 @@ function PokemonContent({ allPokemon, limit }) {
 
   return (
     <div className="content">
+      {/* <SearchBar allPokemon={allPokemon}/> */}
       <PokemonList allPokemon={currentPosts} />
       <Pagination
         postsPerPage={postsPerPage}

@@ -3,32 +3,32 @@ import "./style.css";
 
 function PokemonCard({ pokemon }) {
   return (
-    <div className="bob">
-      <ol className="container">
-        <div className="card">
-          <div className="stop">
+    <div className="pokemon-card">
+      <ol className="pokemon-card_list">
+        <div className="pokemon-card_element">
+          <div className="pokemon-card_header">
             <p>id: {pokemon.id}</p>
             <p>{pokemon.name}</p>
           </div>
 
-          <li className="elem">
-            <div className="pokemon_card">
+          <li className="pokemon-card_body">
+            <div className="pokemon-card_img">
               <img
                 src={pokemon.sprites.other.dream_world.front_default}
                 alt=""
               />
             </div>
           </li>
-          <li className="otstup">
+          <li className="pokemon-card_description">
             type:
-            <div className="flex">
+            <div className="pokemon-type_flex">
               {pokemon.types.map((pokemonType) => (
-                <p className="pad">{pokemonType.type.name}</p>
+                <p className="pokemon-type">{pokemonType.type.name}</p>
               ))}
             </div>
           </li>
-          <li className="elem3">weight: {pokemon.weight}</li>
-          <li className="elem1">height: {pokemon.height}</li>
+          <li className="pokemon-weight">weight: {pokemon.weight}</li>
+          <li className="pokemon-height">height: {pokemon.height}</li>
         </div>
       </ol>
     </div>

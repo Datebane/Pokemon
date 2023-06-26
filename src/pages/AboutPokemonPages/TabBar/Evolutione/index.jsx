@@ -57,10 +57,10 @@ function Evolution({ pokemon }) {
               src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${evolution.id}.png`}
               alt={evolution.name}
             />
-            <p className="nickname">{evolution.name}</p>
+            <p className="evolution-name">{evolution.name}</p>
           </div>
           {index < evolutionChain.length - 1 && (
-            <div className="arrow">&#8594;</div>
+            <div className="evolution-arrow">&#8594;</div>
           )}
         </React.Fragment>
       ))}

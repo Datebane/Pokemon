@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import PokemonContent from "../pages/Home/PokemonContent";
+import SearchBar from "../components/SearchBar";
 
 const PokemonApi = ({ limit }) => {
   const [allPokemon, setAllPokemon] = useState([]);
@@ -25,6 +26,7 @@ const PokemonApi = ({ limit }) => {
   }, [limit]);
 
   return <PokemonContent allPokemon={allPokemon} />;
+  // return <SearchBar allPokemon={allPokemon} />;
 };
 
 export default PokemonApi;

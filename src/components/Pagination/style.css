@@ -1,19 +1,14 @@
-.pagination {
+.pagination-list {
   list-style-type: none;
   display: flex;
   justify-content: center;
 }
 
-.bib {
-  display: flex;
-  justify-content: center;
-}
-
-.item {
+.pagination-button {
   margin: 0 10px;
 }
 
-.link {
+.pagination-button-link {
   border: 2px solid #88888830;
   border-radius: 5px;
   padding: 5px 10px;
@@ -30,7 +25,7 @@
   transition: 0s, color 0.5s, background-color 0.5s;
 }
 
-.link:hover {
+.pagination-button-link:hover {
   color: #fff;
   --_c: var(--c);
   --_p: 100%;
@@ -41,6 +36,26 @@ a:link {
   text-decoration: none;
 }
 
-.link.active {
+.pagination-button-link.active {
   background-color: #88888830; /* Змініть колір фону на потрібний вам */
+}
+
+@media (min-width: 320px) {
+  .item {
+    margin: 0 3px;
+  }
+  .pagination-button-link{
+    font-size: 13px;
+    padding: 2.5px 5px;
+  }
+}
+
+@media (min-width: 768px) {
+  .item {
+    margin: 0 10px;
+  }
+  .pagination-button-link{
+    font-size: 20px;
+    padding: 4px 8px;
+  }
 }

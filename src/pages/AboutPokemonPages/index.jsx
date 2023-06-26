@@ -27,14 +27,14 @@ const AboutPokemonPages = () => {
     {
       title: "Pokedex",
       content: (
-        <ul className="ul">
-          <li className="lip">
-            Type: <span className="stats">{pokemon.types?.map((type) => type.type.name).join(", ")}</span>
+        <ul className="pokedex-list">
+          <li className="pokedex-list-element">
+            Type: <span className="pokemon_stats-element">{pokemon.types?.map((type) => type.type.name).join(", ")}</span>
           </li>
-          <li className="lip">Height: <span className="stats">{pokemon.height}</span></li>
-          <li className="lip">Weight: <span className="stats">{pokemon.weight}</span></li>
-          <li className="lip">
-            Abilities:<span className="stats">{" "}
+          <li className="pokedex-list-element">Height: <span className="pokemon_stats-element">{pokemon.height}</span></li>
+          <li className="pokedex-list-element">Weight: <span className="pokemon_stats-element">{pokemon.weight}</span></li>
+          <li className="pokedex-list-element">
+            Abilities:<span className="pokemon_stats-element">{" "}
             {pokemon.abilities
               ?.map((ability) => ability.ability.name)
               .join(", ")}</span>
@@ -45,11 +45,11 @@ const AboutPokemonPages = () => {
     {
       title: "Stats",
       content: (
-        <ul className="ul">
+        <ul className="pokedex-list">
           {pokemon.stats?.map((pokemonStat) => (
-            <li className="list">
+            <li className="stats-list">
               <p>{pokemonStat.stat.name}</p>
-              <p className="stats">{pokemonStat.base_stat}</p>
+              <p className="pokemon_stats-element">{pokemonStat.base_stat}</p>
             </li>
           ))}
         </ul>
@@ -62,17 +62,17 @@ const AboutPokemonPages = () => {
   ];
 
   return (
-    <div className="bup">
-      <div className="box">
+    <>
+      <div className="about-header">
         <div className="pod">
-          <button onClick={() => navigate(-1)} className="button">
+          <button onClick={() => navigate(-1)} className="navigate-button">
             Back
           </button>
-          <div className="name">{pokemon.name}</div>
+          <div className="header_pokemon-name">{pokemon.name}</div>
         </div>
-        <div className="ids">#{pokemon.id}</div>
+        <div className="header_pokemon-id">#{pokemon.id}</div>
       </div>
-      <div className="block">
+      <div className="about_pokemon-information">
         <img
           src={
             pokemon.sprites?.other?.dream_world?.front_default ||
@@ -81,11 +81,11 @@ const AboutPokemonPages = () => {
           alt=""
           className="pokemon-image"
         />
-        <div className="about">
+        <div className="about_tab-bar">
           <TabBar tabs={tabs} />
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

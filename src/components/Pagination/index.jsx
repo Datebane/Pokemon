@@ -15,11 +15,11 @@ const Pagination = ({ postsPerPage, totalPosts, currentPage, paginate }) => {
       // Якщо загальна кількість сторінок менша або рівна максимальній кількості видимих кнопок,
       // відображаємо всі кнопки пагінації
       return pageNumbers.map((number) => (
-        <li key={number} className="item">
+        <li key={number} className="pagination-button">
           <a
             onClick={() => paginate(number)}
             href="#"
-            className={`link ${currentPage === number ? "active" : ""}`}
+            className={`pagination-button-link ${currentPage === number ? "active" : ""}`}
           >
             {number}
           </a>
@@ -43,26 +43,26 @@ const Pagination = ({ postsPerPage, totalPosts, currentPage, paginate }) => {
         <>
           {startPage > 1 && (
             <>
-              <li className="item">
+              <li className="pagination-button">
                 <a
                   onClick={() => paginate(1)}
                   href="#"
-                  className={`link ${currentPage === 1 ? "active" : ""}`}
+                  className={`pagination-button-link ${currentPage === 1 ? "active" : ""}`}
                 >
                   1
                 </a>
               </li>
-              <li className="item">
+              <li className="pagination-button">
                 <span className="ellipsis">{ellipsis}</span>
               </li>
             </>
           )}
           {visiblePageNumbers.map((number) => (
-            <li key={number} className="item">
+            <li key={number} className="pagination-button">
               <a
                 onClick={() => paginate(number)}
                 href="#"
-                className={`link ${currentPage === number ? "active" : ""}`}
+                className={`pagination-button-link ${currentPage === number ? "active" : ""}`}
               >
                 {number}
               </a>
@@ -70,14 +70,14 @@ const Pagination = ({ postsPerPage, totalPosts, currentPage, paginate }) => {
           ))}
           {endPage < pageNumbers.length && (
             <>
-              <li className="item">
+              <li className="pagination-button">
                 <span className="ellipsis">{ellipsis}</span>
               </li>
-              <li className="item">
+              <li className="pagination-button">
                 <a
                   onClick={() => paginate(pageNumbers.length)}
                   href="#"
-                  className={`link ${
+                  className={`pagination-button-link ${
                     currentPage === pageNumbers.length ? "active" : ""
                   }`}
                 >
@@ -104,24 +104,24 @@ const Pagination = ({ postsPerPage, totalPosts, currentPage, paginate }) => {
   };
 
   return (
-    <div className="bib">
-      <ul className="pagination">
-        <li className="item">
+    <>
+      <ul className="pagination-list">
+        <li className="pagination-button">
           <a
             onClick={goToPreviousPage}
             href="#"
-            className={`link ${currentPage === 1 ? "disabled" : ""}`}
+            className={`pagination-button-link ${currentPage === 1 ? "disabled" : ""}`}
             disabled={currentPage === 1}
           >
             Back
           </a>
         </li>
         {renderPageNumbers()}
-        <li className="item">
+        <li className="pagination-button">
           <a
             onClick={goToNextPage}
             href="#"
-            className={`link ${
+            className={`pagination-button-link ${
               currentPage === Math.ceil(totalPosts / postsPerPage)
                 ? "disabled"
                 : ""
@@ -132,7 +132,7 @@ const Pagination = ({ postsPerPage, totalPosts, currentPage, paginate }) => {
           </a>
         </li>
       </ul>
-    </div>
+    </>
   );
 };
 

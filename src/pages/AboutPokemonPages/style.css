@@ -1,4 +1,18 @@
-.button {
+.about-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 10px;
+  border-bottom: 2px solid #88888830;
+}
+
+.pod {
+  display: flex;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.navigate-button {
   border: 2px solid #88888830;
   border-radius: 5px;
   padding: 5px 10px;
@@ -14,29 +28,21 @@
   transition: 0s, color 0.5s, background-color 0.5s;
 }
 
-.button:hover {
+.navigate-button:hover {
   color: #fff;
   --_c: var(--c);
   --_p: 100%;
   transition: 0.5s, color 0s 0.5s, background-color 0s 0.5s;
 }
 
-.box {
-  display: flex;
-  justify-content: space-between;
-  margin: 0;
-  padding: 10px;
-  border-bottom: 2px solid #88888830;
-}
-
-.name {
+.header_pokemon-name {
   text-transform: uppercase;
   display: flex;
   font-size: 25px;
   padding-left: 10px;
 }
 
-.ids {
+.header_pokemon-id {
   text-transform: uppercase;
   display: flex;
   align-items: center;
@@ -49,13 +55,7 @@
   margin-top: 5px;
 }
 
-.pod {
-  display: flex;
-  margin-bottom: 5px;
-  margin-top: 5px;
-}
-
-.block {
+.about_pokemon-information {
   display: flex;
   justify-content: space-between;
   padding-right: 10px;
@@ -69,31 +69,35 @@
   height: auto;
 }
 
-.about {
+.about_tab-bar {
   margin-top: 30px;
   margin-left: 30px;
 }
-
-.container {
-  display: flex;
+/* tabs */
+.pokedex-list {
+  list-style-type: none;
+  padding: 0;
 }
 
-.lip {
+.pokedex-list-element {
   border: 2px solid #88888830;
   background-color: #000121;
   border-radius: 10px;
-  padding:  10px;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 2px;
 }
 
-.ul {
-  list-style-type: none;
-  padding: 0;
+.pokemon_stats-element {
+  border: 2px solid #88888830;
+  border-radius: 5px;
+  padding-left: 3px;
+  padding-right: 3px;
+  background-color: orange;
 }
 
-.list {
+.stats-list {
   display: flex;
   justify-content: space-between;
   border: 2px solid #88888830;
@@ -101,14 +105,6 @@
   background-color: #000121;
   padding: 0 10px;
   margin-bottom: 2px;
-}
-
-.stats {
-  border: 2px solid #88888830;
-  border-radius: 5px;
-  padding-left: 3px;
-  padding-right: 3px;
-  background-color: orange;
 }
 
 @media (min-width: 320px) {
@@ -130,7 +126,7 @@
 }
 
 @media (min-width: 1024px) {
-  .block{
+  .block {
     justify-content: space-between;
   }
   .pokemon-image {

@@ -1,43 +1,41 @@
-.pokemon_card {
-  width: 300px;
-  height: 300px;
+.pokemon-card {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  margin-right: 50px;
 }
 
-.card {
+.pokemon-card_list {
+  list-style-type: none;
+}
+
+.pokemon-card_element {
   margin-bottom: 10px;
   background-color: #000121;
   border: 1px solid #88888830;
   border-radius: 10px;
-  
 }
 
-.container {
-  list-style-type: none;
+.pokemon-card_header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  border: 1px solid #88888830;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
 }
 
-.elem {
+.pokemon-card_body {
   border: 1px solid #88888830;
   background-color: #000121;
   padding: 0 10px;
   padding-left: 10px;
 }
 
-.elem3{
-  border: 1px solid #88888830;
-  background-color: #000121;
-  padding: 5px 10px;
-  padding-left: 10px;
-}
-
-.elem1 {
-  border-bottom: 1px solid #88888830;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  background-color: #000121;
-  padding: 5px 10px;
-  padding-left: 10px;
+.pokemon-card_img {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
 }
 
 img {
@@ -45,8 +43,21 @@ img {
   height: 250px;
 }
 
-.pad {
-  padding:1.5px 0;
+.pokemon-card_description {
+  display: flex;
+  padding: 2.5px 0;
+  border: 1px solid #88888830;
+  padding-left: 10px;
+  background-color: #000121;
+  justify-content: space-between;
+}
+
+.pokemon-type_flex {
+  display: flex;
+}
+
+.pokemon-type {
+  padding: 1.5px 0;
   padding-right: 10px;
   margin: 2px;
   border: 1px solid #88888830;
@@ -56,30 +67,18 @@ img {
   background-color: orange;
 }
 
-.flex{
-  display: flex;
-}
-
-.otstup {
-  display: flex;
-  padding: 2.5px 0;
+.pokemon-weight {
   border: 1px solid #88888830;
-  padding-left: 10px;
   background-color: #000121;
-  justify-content: space-between;
+  padding: 5px 10px;
+  padding-left: 10px;
 }
 
-.stop {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 10px;
-  border: 1px solid #88888830;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-}
-
-.bob {
-  display: flex;
-  align-items: center;
-  margin-right: 50px;
+.pokemon-height {
+  border-bottom: 1px solid #88888830;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: #000121;
+  padding: 5px 10px;
+  padding-left: 10px;
 }

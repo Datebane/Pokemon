@@ -1,16 +1,9 @@
-.icon {
-  width: 45px;
-  height: 45px;
+.list-pokemon {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
-.icon_2 {
-  width: 200px;
-  height: 200px;
-}
-
-.table {
+.list-pokemon_element {
   border: 2px solid #88888830;
   border-radius: 10px;
   list-style-type: none;
@@ -34,42 +27,25 @@
   transition: 0s, color 0.5s, background-color 0.5s;
 }
 
-.table:hover {
-  /* background-color: #88888830; */
+.list-pokemon_element:hover {
   color: white;
   --_c: var(--c);
   --_p: 100%;
   transition: 0.5s, color 0s 0.5s, background-color 0s 0.5s;
 }
 
-/* #item {
-  --b: 0.1em;   
-  --c: #1095c1; 
-  
-  color: #0000;
-  padding-block: var(--b);
-  background: 
-    linear-gradient(var(--c) 50%,#000 0) 0% calc(100% - var(--_p,0%))/100% 200%,
-    linear-gradient(var(--c) 0 0) 0% var(--_p,0%)/var(--_p,0%) var(--b) no-repeat;
-  -webkit-background-clip: text,padding-box;
-          background-clip: text,padding-box;
-  transition: .3s var(--_s,0s) linear,background-size .3s calc(.3s - var(--_s,0s));
-}
-#item:hover {
-  --_p: 100%;
-  --_s: .3s;
-} */
-
-.pokemon {
+.pokemon-element {
   display: flex;
   justify-content: space-around;
 }
 
-.displey {
+.list-pokemon_img {
+  width: 45px;
+  height: 45px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
-.text {
+.list-pokemon_description {
   justify-content: center;
 }
