@@ -57,7 +57,6 @@
 
 .about_pokemon-information {
   display: flex;
-  justify-content: space-between;
   padding-right: 10px;
   height: 500px;
 }
@@ -108,7 +107,7 @@
 }
 
 @media (min-width: 320px) {
-  .block {
+  .about_pokemon-information {
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -123,10 +122,13 @@
     width: 250px;
     height: auto;
   }
+  .about_pokemon-information{
+    flex-direction: row;
+  }
 }
 
 @media (min-width: 1024px) {
-  .block {
+  .about_pokemon-information {
     justify-content: space-between;
   }
   .pokemon-image {

@@ -49,21 +49,23 @@ function Evolution({ pokemon }) {
   }
 
   return (
-    <div className="evolution-chain">
-      {evolutionChain.map((evolution, index) => (
-        <React.Fragment key={index}>
-          <div className="evolution">
-            <img
-              src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${evolution.id}.png`}
-              alt={evolution.name}
-            />
-            <p className="evolution-name">{evolution.name}</p>
-          </div>
-          {index < evolutionChain.length - 1 && (
-            <div className="evolution-arrow">&#8594;</div>
-          )}
-        </React.Fragment>
-      ))}
+    <div className="evolution-container">
+      <div className="evolution-chain">
+        {evolutionChain.map((evolution, index) => (
+          <React.Fragment key={index}>
+            <div className="evolution">
+              <img
+                src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${evolution.id}.png`}
+                alt={evolution.name}
+              />
+              <p className="evolution-name">{evolution.name}</p>
+            </div>
+            {index < evolutionChain.length - 1 && (
+              <div className="evolution-arrow">&#8594;</div>
+            )}
+          </React.Fragment>
+        ))}
+      </div>
     </div>
   );
 }

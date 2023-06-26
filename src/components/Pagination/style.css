@@ -41,7 +41,7 @@ a:link {
 }
 
 @media (min-width: 320px) {
-  .item {
+  .pagination-button {
     margin: 0 3px;
   }
   .pagination-button-link{
@@ -51,7 +51,7 @@ a:link {
 }
 
 @media (min-width: 768px) {
-  .item {
+  .pagination-button {
     margin: 0 10px;
   }
   .pagination-button-link{

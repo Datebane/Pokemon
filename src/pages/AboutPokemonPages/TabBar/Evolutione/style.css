@@ -1,3 +1,8 @@
+.evolution-container{
+  display: flex;
+  justify-content: center;
+}
+
 .evolution-chain {
   display: flex;
   align-items: center;

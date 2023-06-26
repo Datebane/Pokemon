@@ -1,29 +1,13 @@
-// import React from "react";
-// import ReactDOM from "react-dom/client";
-// import { BrowserRouter } from "react-router-dom";
-// import AppRouter from "./routes/routes";
-// import "./index.css";
-
-// const root = ReactDOM.createRoot(document.getElementById("root"));
-// root.render(
-//   <BrowserRouter>
-//     <React.StrictMode>
-//       <AppRouter />
-//     </React.StrictMode>
-//   </BrowserRouter>
-// );
-
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
-import AppRouter from "./routes/routes";
 import "./index.css";
+import App from "./App";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <AppRouter />
-    </BrowserRouter>
-  </React.StrictMode>,
-  document.getElementById("root")
+createRoot(document.getElementById("root")).render(
+  <BrowserRouter>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </BrowserRouter>
 );
