@@ -42,3 +42,4 @@ function PokemonList({ allPokemon }) {
 }
 
 export default PokemonList;
+

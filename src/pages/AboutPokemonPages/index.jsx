@@ -90,3 +90,4 @@ const AboutPokemonPages = () => {
 };
 
 export default AboutPokemonPages;
+

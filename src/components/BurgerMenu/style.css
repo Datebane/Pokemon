@@ -1,0 +1,30 @@
+.burger {
+  position: absolute;
+  background-color: #000121;
+  border: 2px solid #88888830;
+  border-radius: 5px;
+  padding: 10px;
+  z-index: 1; 
+  top: 10px;
+  left: 35px;  
+}
+
+.list-burger {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.list-burger li {
+  padding: 10px;
+  font-size: 18px;
+  color: white;
+}
+
+.list-burger li:hover {
+  background-color: #88888830;
+}
+
+

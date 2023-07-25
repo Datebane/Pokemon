@@ -1,29 +1,46 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import "./style.css";
-// import { useEffect } from "react";
-// import PokemonContent from "../../pages/Home/PokemonContent";
 
-// const SearchBar = ({ allPokemon }) => {
-  
-// const [inputValue, setInputValue] = useState("");
-// const [filterPokemon, setFilterPokemon] = useState([]);
-
-// useEffect(() => {
-//   if (inputValue.length > 0)
-//     setFilterPokemon(
-//       allPokemon.filter((pokemon) => pokemon.name.includes(inputValue))
-//     );
-//   else setFilterPokemon(allPokemon);
-// }, [inputValue]);
 const SearchBar = () => {
   const [keyword, setKeyword] = useState("");
+  const [suggestions, setSuggestions] = useState([]); // Список підказок
   const navigate = useNavigate();
 
-  const handleSearch = (e) => {
+  const fetchPokemonNames = async () => {
+    try {
+      const response = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=1000");
+      const pokemonNames = response.data.results.map((pokemon) => pokemon.name);
+      setSuggestions(pokemonNames);
+    } catch (error) {
+      console.log("Error fetching Pokémon names:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchPokemonNames();
+  }, []); // Викликаємо один раз при завантаженні компонента
+
+  const fetchPokemonData = async (pokemonName) => {
+    try {
+      const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
+      const pokemonData = response.data;
+      return pokemonData;
+    } catch (error) {
+      return null; // Return null if the Pokémon is not found
+    }
+  };
+
+  const handleSearch = async (e) => {
     e.preventDefault();
     if (keyword.trim() !== "") {
-      navigate(`/about/${keyword}`);
+      const pokemonData = await fetchPokemonData(keyword.toLowerCase());
+      if (pokemonData) {
+        navigate(`/about/${keyword}`);
+      } else {
+        console.log(`Pokémon with the name "${keyword}" does not exist.`);
+      }
     }
   };
 
@@ -34,16 +51,16 @@ const SearchBar = () => {
         className="search-bar_input"
         value={keyword}
         placeholder="Search pokemon"
-        onChange={(e) => setKeyword(e.target.value)}
+        list={keyword.trim() !== "" ? "suggestions" : undefined} // Виводимо підказки лише якщо введено значення
+        onChange={(e) => setKeyword(e.target.value.toLowerCase())}
       />
-      {/* <input
-        type="text"
-        className="search-bar_input"
-        placeholder="Search pokemon"
-        onChange={(e) => setInputValue(e.target.value)}
-      /> */}
-      {/* {console.log(filterPokemon)} */}
-      {/* <PokemonContent allPokemon={filterPokemon}/> */}
+
+      <datalist id="suggestions">
+        {suggestions.map((suggestion) => (
+          <option key={suggestion} value={suggestion} />
+        ))}
+      </datalist>
+
       <button className="search-bar_button" onClick={handleSearch}>
         Search
       </button>
@@ -52,3 +69,4 @@ const SearchBar = () => {
 };
 
 export default SearchBar;
+
